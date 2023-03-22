@@ -1,0 +1,22 @@
+# Compiled output
+dist/
+build/
+
+# Dependencies
+node_modules/
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.test
+.env.test.local
+
+# IDE files
+.vscode/
+.idea/
+*.tsbuildinfo
+
+# Other
+yarn-error.log
