@@ -1,7 +1,5 @@
 import { ethers } from "ethers";
 import { ACCOUNT_1, ACCOUNT_2, INFURA_KEY, PRIVATE_KEY_1 } from "../config";
-
-// Import function that prints account balances
 import { accounts } from "./01_accounts";
 
 // Create a provider for connecting to the Goerli test network using the Infura API key
