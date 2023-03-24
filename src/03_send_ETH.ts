@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { ACCOUNT_1, ACCOUNT_2, INFURA_KEY, PRIVATE_KEY_1 } from "../config";
-import { accounts } from "./01_accounts";
+import { accounts } from "./01_log_account_balance";
 
 // Create a provider for connecting to the Goerli test network using the Infura API key
 const provider = new ethers.InfuraProvider("goerli", INFURA_KEY);
@@ -9,7 +9,7 @@ const provider = new ethers.InfuraProvider("goerli", INFURA_KEY);
 const wallet = new ethers.Wallet(PRIVATE_KEY_1, provider);
 
 // Define an async function that creates a transaction
-export const creatTransaction = async () => {
+export const sendETH = async () => {
   // Print the balance of ACCOUNT_1 and ACCOUNT_2 using the accounts() function
   accounts(ACCOUNT_1);
   accounts(ACCOUNT_2);

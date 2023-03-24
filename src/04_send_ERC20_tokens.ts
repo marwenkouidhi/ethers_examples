@@ -1,6 +1,6 @@
 import { Contract, ethers } from "ethers";
 import { ACCOUNT_1, ACCOUNT_2, INFURA_KEY, PRIVATE_KEY_1 } from "../config";
-import { accounts } from "./01_accounts";
+import { accounts } from "./01_log_account_balance";
 
 const ERC20_ABI = [
   "function balanceOf(address owner) view returns (uint)",
