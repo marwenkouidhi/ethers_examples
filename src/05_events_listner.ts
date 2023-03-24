@@ -15,9 +15,12 @@ const ERC20_ADDRESS = "0x514910771AF9Ca656af840dff83E8264EcF986CA";
 export const listenToEvents = async () => {
   const provider = new ethers.InfuraProvider("homestead", INFURA_KEY);
   const ERC20 = new ethers.Contract(ERC20_ADDRESS, ERC20_ABI, provider);
+
+  const blockNum = await provider.getBlockNumber();
   const transferEvents = await ERC20.queryFilter(
     "Transfer",
-    "0x415512",
-    "0x41A3A3"
+    blockNum - 1,
+    blockNum
   );
+  console.log(transferEvents);
 };
